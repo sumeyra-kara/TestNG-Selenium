@@ -41,20 +41,21 @@ public class LoginPractice {
             System.out.println("uRL test failed");
         }
 
-        System.out.println("****************++");
 
-        String expectedTextSecureArea = "Secure Area";
-        WebElement securaArea = driver.findElement(By.className("icon-lock"));
-
+        String expectedTextSecureArea = " Secure Area";
+        WebElement securaArea = driver.findElement(By.tagName("h2"));
         String actualTextSecureArea = securaArea.getText();
+
+        System.out.println("actualTextSecureArea.isEmpty() = " + actualTextSecureArea.isEmpty());
+
         System.out.println("actualTextSecureArea = " + actualTextSecureArea);
+
 
         if (actualTextSecureArea.equals(expectedTextSecureArea)){
             System.out.println("passed");
         } else {
             System.out.println("failed");
         }
-        System.out.println("***********");
 
 
         String text = "Elemental Selenium";
@@ -80,7 +81,7 @@ public class LoginPractice {
             System.out.println("Href Attribute Test Failed");
         }
 
-        //driver.quit();
+        driver.quit();
 
 
 
