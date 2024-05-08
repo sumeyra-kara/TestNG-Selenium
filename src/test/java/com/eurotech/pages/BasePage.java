@@ -1,5 +1,6 @@
 package com.eurotech.pages;
 
+import com.eurotech.utility.BrowserUtils;
 import com.eurotech.utility.Driver;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -13,7 +14,7 @@ public abstract class BasePage {
     public BasePage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
-    @FindBy(className = "nav__menu-item") // Verifizieren sie 3 menu
+    @FindBy(className = "nav__menu-item")
     public List<WebElement> menuList;
 
     public WebElement menuBar (String menu){
@@ -21,9 +22,10 @@ public abstract class BasePage {
         return Driver.getDriver().findElement(By.xpath(menuPath));
     }
     public WebElement subMenuBar(String subMenu){
-        Actions actions = new Actions(Driver.getDriver());
         WebElement myAccount = Driver.getDriver().findElement(By.xpath("//span[.='My Account']"));
-        actions.moveToElement(myAccount).perform();
+        //Actions actions = new Actions(Driver.getDriver());
+        //actions.moveToElement(myAccount).perform();
+        BrowserUtils.hover(myAccount);
         String subMenuPath = "//span[text()='"+subMenu+"']";
         return Driver.getDriver().findElement(By.xpath(subMenuPath));
     }

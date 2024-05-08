@@ -26,7 +26,7 @@ public class _2_MenuBarDynamicClick extends TestBase {
     @Test
     public void dynamicClickTest() {
         loginPage.login();
-        dashboardPage.menuBar("Dashboard").click();
+        dashboardPage.menuBar("My Posts").click();
     }
     @Test
     public void subMenuDynamicClickTest() {

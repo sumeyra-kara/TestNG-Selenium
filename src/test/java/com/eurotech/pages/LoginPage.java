@@ -32,17 +32,17 @@ public class LoginPage {
     }
     //@FindBy notasyonu test class’larinda kullanacagimiz Web Elementlerini Page sayfasinda locate etmek icin kullanilir
 
-    @FindBy(id = "rcc-confirm-button")
+    @FindBy(id = "rcc-confirm-button") // cookies'ler icin
     public WebElement confirmButton;
-    @FindBy(id = "loginpage-input-email")
+    @FindBy(id = "loginpage-input-email") // email
     public WebElement inputEmail;
 
-    @FindBy(id = "loginpage-form-pw-input")
+    @FindBy(id = "loginpage-form-pw-input") // password
     public WebElement inputPassword;
 
-    @FindBy (id = "loginpage-form-btn")
+    @FindBy (id = "loginpage-form-btn") // login Button icin
     public WebElement inputLogin;
-    @FindBy (xpath = "//div[text()='Invalid Credentials!']")
+    @FindBy (xpath = "//div[text()='Invalid Credentials!']") // uyari yazisi
     public WebElement inputWarnung;
 
     @FindAll({ // logical OR

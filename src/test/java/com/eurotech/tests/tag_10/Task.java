@@ -44,6 +44,7 @@ public class Task {
             }
         }
 
+
         ((JavascriptExecutor)driver).executeScript("window.open('https://demoqa.com/frames','_blank')");
         Thread.sleep(2000);
 
@@ -87,6 +88,7 @@ public class Task {
         Thread.sleep(3000);
         driver.switchTo().alert().accept();
 
+
         WebElement promptResult = driver.findElement(By.id("promptResult"));
         String actualHelloWorldYazisi = promptResult.getText();
         String expected = "You entered Hello World";
@@ -113,6 +115,8 @@ public class Task {
         String expectedIcerik = "Child Iframe";
         Assert.assertTrue(actualIcerik.contains(expectedIcerik));
         driver.switchTo().defaultContent();
+
+
 
 
     }

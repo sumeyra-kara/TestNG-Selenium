@@ -297,7 +297,6 @@ for given duration
         }
     }
 
-
     /**
      * Waits for element to be not stale
      *
