@@ -10,7 +10,7 @@ import org.testng.annotations.Test;
 import java.util.Locale;
 
 public class HtmlPopups {
-    /*
+    /**
      * Gehen Sie zur https://www.primefaces.org/showcase/ui/overlay/confirmDialog.xhtml?jfwid=e893a
      * Klicken Sie Confirm button
      * Klicken Sie Yes button

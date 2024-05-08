@@ -112,9 +112,6 @@ public class _1_WebTables {
         for (WebElement a : elements){
             System.out.println("a.getText() = " + a.getText());
         }
-
-
     }
 
-    //
 }

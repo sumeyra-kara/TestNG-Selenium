@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 
 public class JsAlerts {
-    /*
+    /**
      * Gehen Sie zur https://the-internet.herokuapp.com/javascript_alerts
      * Klicken Sie Click for JS Alert und akzeptieren
      * Klicken Sie Click for Js Confirm und ablehnen
@@ -35,7 +35,6 @@ public class JsAlerts {
         WebDriverFactory.wait(2);
         alert.sendKeys("I have clicked");
         alert.accept();
-
         driver.quit();
 
 

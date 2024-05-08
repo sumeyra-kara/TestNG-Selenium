@@ -15,7 +15,7 @@ import java.util.concurrent.TimeUnit;
 
 public class Driver {
     private Driver(){} // baska classlardan obje olusturulmasin diye
-    private static WebDriver driver; // classname ile cagirmam icin static yapiyoruz
+    public static WebDriver driver; // classname ile cagirmam icin static yapiyoruz
     // encapsülation kullanmak istedigimden private oluyor
     public static WebDriver getDriver(){
         String browser = ConfigReader.getProperty("browser");

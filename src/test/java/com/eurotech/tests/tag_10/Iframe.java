@@ -25,7 +25,6 @@ public class Iframe {
         WebElement content = driver.findElement(By.id("tinymce"));
         content.clear();
         content.sendKeys("Hello World");
-
         driver.quit();
     }
 }
