@@ -29,4 +29,12 @@ public abstract class BasePage {
         String subMenuPath = "//span[text()='"+subMenu+"']";
         return Driver.getDriver().findElement(By.xpath(subMenuPath));
     }
+    public WebElement subMenuBar2(String subMenu){
+        WebElement myAccount = Driver.getDriver().findElement(By.xpath("//span[.='My Account']"));
+        BrowserUtils.hover(myAccount);
+        String subMenuPath = "//span[text()='"+subMenu+"']";
+        return Driver.getDriver().findElement(By.xpath(subMenuPath));
+    }
+
+
 }

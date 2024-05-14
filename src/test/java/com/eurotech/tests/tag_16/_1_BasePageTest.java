@@ -27,5 +27,8 @@ public class _1_BasePageTest extends TestBase {
 
         List<String> actualMenuList = BrowserUtils.getElementsText(dashboardPage.menuList);
         Assert.assertEquals(actualMenuList, expectedMenu);
+
+
+
     }
 }
