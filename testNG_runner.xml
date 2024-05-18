@@ -1,0 +1,121 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<!-- Tum testNG dosyalari su kodla baslamalidir:
+     <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+     sonrasinda calistiracagimiz testleri hiyerarsik olarak xml dosyasinda belirleyebiliriz
+     wie führt man ein spezifisches Package aus?
+     <suite name="ETSB16 Automation" verbose="1">
+    <test name="ETSB16 Smoke Test">
+        <packages>
+            <package name="com.eurotech.tests.tag_17"></package>
+        </packages>
+    </test>
+</suite>
+     -->
+
+<!--
+     wie führt man ein mehrere Package aus? - birden fazla package nasil calistirabilirim?
+
+
+<suite name="ETSB16 Automation" verbose="1">
+    <test name="Minor Regression Test">
+        <packages>
+            <package name="com.eurotech.tests.tag_16"></package>
+            <package name="com.eurotech.tests.tag_17"></package>
+            <package name="com.eurotech.tests.tag_18"></package>
+        </packages>
+    </test>
+</suite> -->
+
+
+<!-- wie führt man  alle Packages/alle Tests aus?
+
+<suite name="ETSB16 Automation" verbose="1">
+    <test name="Major Regression Test">
+        <packages>
+            <package name="com.eurotech.tests.*"></package>
+        </packages>
+    </test>
+</suite>-->
+
+
+<!-- wie führt man  eine spezisifsche Class aus?
+
+<suite name="ETSB16 Automation" verbose="1">
+    <test name="Class Test">
+       <classes>
+           <class name="com.eurotech.tests.tag_19._1_VerifyUserInfo"></class>
+       </classes>
+    </test>
+</suite>-->
+
+
+<!-- wie führt man mehrere Klassen aus?
+
+<suite name="ETSB16 Automation" verbose="1">
+    <test name="Mehrere Class Test">
+       <classes>
+           <class name="com.eurotech.tests.tag_19._1_VerifyUserInfo"></class>
+           <class name="com.eurotech.tests.tag_18._2_WrongUsernameTest"></class>
+           <class name="com.eurotech.tests.tag_17.Task"></class>
+       </classes>
+    </test>
+</suite>
+-->
+
+
+
+<!-- wie führt man einen spezifischen Test aus?
+<suite name="ETSB16 Automation" verbose="1">
+    <test name=" Batch16 Test">
+        <classes>
+            <class name="com.eurotech.tests.tag_18._2_WrongUsernameTest">
+                <methods>
+                    <include name="wrongUsernameTest"></include>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+-->
+
+<!-- wie führt man einen spezifischen Test aus?
+
+<suite name="ETSB16 Automation" verbose="1">
+    <test name=" Batch16 Test2">
+        <classes>
+            <class name="com.eurotech.tests.tag_18._2_WrongUsernameTest">
+                <methods>
+                    <exclude name="wrongPasswordTest"></exclude>
+                    <exclude name="wrongPasswordTest2"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
+-->
+
+<!-- wie führt man mehrere Test Suits aus? -->
+
+<suite name="ETSB16 Automation" verbose="1">
+    <test name="Batch16 Test">
+        <classes>
+            <class name="com.eurotech.tests.tag_18._2_WrongUsernameTest">
+                <methods>
+                    <exclude name="wrongPasswordTest"></exclude>
+                    <exclude name="wrongPasswordTest2"></exclude>
+                </methods>
+            </class>
+        </classes>
+    </test>
+    <test name="Class Test">
+        <classes>
+            <class name="com.eurotech.tests.tag_19._1_VerifyUserInfo"></class>
+        </classes>
+    </test>
+</suite>
+
+
+
+
+
+

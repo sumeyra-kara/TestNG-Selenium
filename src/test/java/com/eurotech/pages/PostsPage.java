@@ -8,12 +8,12 @@ public class PostsPage extends BasePage {
     @FindBy(xpath = "//textarea[@name='title']") // add a Title
     public WebElement addTitle;
 
-    @FindBy(xpath = "//textarea[@name='text']") //
-    public WebElement createPost;
+    @FindBy(xpath = "//textarea[@name='text']") // textareaInput
+    public WebElement textareaInput;
     @FindBy(xpath = "(//input[@type='submit'])[1]") //
-    public WebElement submit;
+    public WebElement submitButton;
     @FindBy(xpath = "//div[@class='alert alert-success']") //
-    public WebElement postMessage;
+    public WebElement postCreatedMessage;
 
 
 

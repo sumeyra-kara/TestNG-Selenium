@@ -23,8 +23,6 @@ public abstract class BasePage {
     }
     public WebElement subMenuBar(String subMenu){
         WebElement myAccount = Driver.getDriver().findElement(By.xpath("//span[.='My Account']"));
-        //Actions actions = new Actions(Driver.getDriver());
-        //actions.moveToElement(myAccount).perform();
         BrowserUtils.hover(myAccount);
         String subMenuPath = "//span[text()='"+subMenu+"']";
         return Driver.getDriver().findElement(By.xpath(subMenuPath));
@@ -35,6 +33,7 @@ public abstract class BasePage {
         String subMenuPath = "//span[text()='"+subMenu+"']";
         return Driver.getDriver().findElement(By.xpath(subMenuPath));
     }
+    public void logout(){subMenuBar("Logout").click();}
 
 
 }

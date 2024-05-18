@@ -6,8 +6,6 @@ import com.eurotech.pages.LoginPage;
 import com.eurotech.pages.PostsPage;
 import com.eurotech.tests.TestBase;
 import com.eurotech.utility.BrowserUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -40,10 +38,10 @@ public class Task2 extends TestBase {
         BrowserUtils.verifyURLContains("posts");
 
         postsPage.addTitle.sendKeys("Java kolaydi");
-        postsPage.createPost.sendKeys("Selenium kompleks");
-        postsPage.submit.click();
+        postsPage.textareaInput.sendKeys("Selenium kompleks");
+        postsPage.submitButton.click();
 
-        Assert.assertEquals(postsPage.postMessage.getText(),"Post Created");
+        Assert.assertEquals(postsPage.postCreatedMessage.getText(),"Post Created");
 
         basePage.subMenuBar2("Logout").click();
         //String expected  ="http://www.eurotech.study/login";

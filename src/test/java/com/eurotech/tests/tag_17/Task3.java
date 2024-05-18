@@ -3,11 +3,9 @@ package com.eurotech.tests.tag_17;
 import com.eurotech.pages.BasePage;
 import com.eurotech.pages.DashboardPage;
 import com.eurotech.pages.LoginPage;
-import com.eurotech.pages.ProfilesPage;
+import com.eurotech.pages.DevelopersPage;
 import com.eurotech.tests.TestBase;
 import com.eurotech.utility.BrowserUtils;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -29,7 +27,7 @@ public class Task3  extends TestBase {
     LoginPage loginPage = new LoginPage();
     DashboardPage dashboardPage = new DashboardPage();
     BasePage basePage = new DashboardPage();
-    ProfilesPage profilesPage = new ProfilesPage();
+    DevelopersPage profilesPage = new DevelopersPage();
 
     @Test
     public void test() {
@@ -38,7 +36,7 @@ public class Task3  extends TestBase {
         Assert.assertTrue(dashboardPage.welcomeText.getText().contains(expectedText));
         basePage.menuBar("Developers").click();
 
-        profilesPage.skill.click();
+        profilesPage.skillButton.click();
         profilesPage.skillText.sendKeys("selenium");
         profilesPage.filter.click();
         //Assert.assertEquals(profilesPage.selenium.getText(),"Selenium");

@@ -5,9 +5,9 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class ProfilesPage  extends BasePage{
+public class DevelopersPage extends BasePage{
     @FindBy(id = "dualfilter-skills-btn")
-    public WebElement skill;
+    public WebElement skillButton;
 
     @FindBy(id = "singlefilter-input")
     public WebElement skillText;
@@ -26,9 +26,9 @@ public class ProfilesPage  extends BasePage{
         return Driver.getDriver().findElement(By.xpath(skillPath));
     }
 
-
     @FindBy(xpath = "(//div[@id='profile-item-container']//div//h2)[1]")
     public WebElement ersteName;
+
     public WebElement name(int index) { // dinamik olarak yaparsak
         String namePath = "(//div[@id='profile-item-container']//div//h2)["+index+"]";
         return Driver.getDriver().findElement(By.xpath(namePath));
