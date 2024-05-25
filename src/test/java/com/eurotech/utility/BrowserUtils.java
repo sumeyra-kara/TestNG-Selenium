@@ -194,6 +194,11 @@ for given duration
         return elemTexts;
     }
 
+    public static void verifyText(WebElement element, String expectedText){
+        Assert.assertEquals(element.getText(), expectedText);
+    }
+
+
     /**
      * Performs a pause
      *

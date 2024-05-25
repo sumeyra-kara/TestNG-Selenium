@@ -23,7 +23,6 @@ public class _3_DDFLoginTest  extends TestBase {
 
         extentLogger.info("Go to login page " + ConfigReader.getProperty("url"));
         driver.get(ConfigReader.getProperty("url"));
-
         LoginPage loginPage = new LoginPage();
         DashboardPage dashboardPage = new DashboardPage();
 
@@ -37,7 +36,7 @@ public class _3_DDFLoginTest  extends TestBase {
         loginPage.inputPassword.sendKeys(password);
 
         extentLogger.info("Click Login button");
-        loginPage.login();
+        loginPage.inputLogin.click();
 
         String expectedMessage = "Welcome " + name;
         extentLogger.info("Verify that the expected message is " + expectedMessage);
